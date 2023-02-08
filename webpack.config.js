@@ -15,7 +15,7 @@ module.exports = (_, props) => {
       static: {
         directory: path.join(__dirname, "dist"),
       },
-      port: 3000
+      port: 3000,
     },
     module: {
       rules: [
@@ -39,7 +39,7 @@ module.exports = (_, props) => {
           ],
         },
         {
-          test: /\.(png|jpe?g|gif|svg)$/i,
+          test: /\.(png|jpe?g|gif|ttf|woff2|svg)$/i,
           use: [
             {
               loader: "file-loader",
@@ -90,7 +90,7 @@ module.exports = (_, props) => {
       //     })
       //   : () => {},
       new HtmlWebpackPlugin({
-        template: '/public/index.html'
+        template: '/public/index.html',
       }),
       new MiniCssExtractPlugin({
         ignoreOrder: true,
@@ -109,6 +109,6 @@ module.exports = (_, props) => {
         React: "react",
       }),
       new ESLintPlugin(),
-    ]
+    ],
   }
 };

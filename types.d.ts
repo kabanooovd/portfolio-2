@@ -22,6 +22,10 @@ declare module 'react-markup';
 
 declare module '*.webp';
 
+declare module '*.ttf';
+
+declare module '*.woff2';
+
 declare module '*.png';
 
 declare module '*.jpg';
