@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Footer, Header } from "./components"
-import { Routes } from "./Routes"
+import { AppRoutes } from "./Routes"
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -17,7 +17,7 @@ const AppWrapper = styled.div`
 export const Root: React.FC<{}> = () => {
   return <AppWrapper>
     <Header />
-    <Routes />
+    <AppRoutes />
     <Footer />
   </AppWrapper>
 }

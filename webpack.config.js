@@ -12,6 +12,7 @@ module.exports = (_, props) => {
     entry: './src/index.tsx',
     devtool: 'inline-source-map',
     devServer: {
+      historyApiFallback: true,
       static: {
         directory: path.join(__dirname, "dist"),
       },
