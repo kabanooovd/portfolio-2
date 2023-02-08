@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  color: red;
-  border: 1px solid red;
+  color: ${({theme}) => theme.colors.GREY_LIGHT};
   position: fixed;
-  background: white;
+  background: ${({theme}) => theme.colors.GREY_DARK};
   width: 100%;
   bottom: 0;
-  padding: 10px;
-  
-  /* align-self: flex-end; */
+  height: ${({theme}) => theme.FOTTER_HEIGHT};
+  height: 30px;
 `

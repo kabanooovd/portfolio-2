@@ -1,16 +1,7 @@
+import { Container, MainTitle } from "./Styles"
+
 export const Main = () => {
-  return <div>
-    <div>sdsdsdsdsdsd</div>
-    <div>sdsdsdsdsdsd</div>
-    <div>sdsdsdsdsdsd</div>
-    <div>sdsdsdsdsdsd</div>
-    <div>sdsdsdsdsdsd</div>
-    <div>sdsdsdsdsdsd</div>
-    <div>sdsdsdsdsdsd</div>
-    <div>sdsdsdsdsdsd</div>
-    <div>sdsdsdsdsdsd</div>
-    <div>sdsdsdsdsdsd</div>
-    <div>sdsdsdsdsdsd</div>
-    home page
-  </div>
+  return <Container>
+    <MainTitle>Кабанов Дмитрий</MainTitle>
+  </Container>
 }

@@ -5,13 +5,14 @@ import { AppRoutes } from "./Routes"
 
 const AppWrapper = styled.div`
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background: ${({theme}) => theme.colors.GREY_LIGHT};
   font-family: 'Montserrat';
   font-size: ${({theme}) => theme.fontsSizes.DEFAULT};
   color: ${({theme}) => theme.colors.DEFAULT_TEX_COLOR};
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  /* overflow-y: hidden; */
 `
 
 export const Root: React.FC<{}> = () => {

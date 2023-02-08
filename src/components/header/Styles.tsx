@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  border: 1px solid red;
-  position: fixed;
-  width: 100%;
-  background: white;
-  padding: 20px 40px;
+export const Container = styled.div<{}>`
+  color: ${({theme}) => theme.colors.GREY_LIGHT};
+  background: ${({theme}) => theme.colors.GREY_DARK};
+  height: ${({theme}) => theme.HEADER_HEIGHT};
 `

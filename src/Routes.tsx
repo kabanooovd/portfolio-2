@@ -4,7 +4,9 @@ import { ROUTES } from "./config";
 import { About, Education, Main, Projects } from "./pages";
 
 const ContentWrapper = styled.div`
-  padding: 100px 40px 10px 40px;
+  /* padding: 100px 40px 10px 40px; */
+  overflow-y: auto;
+
 `
 
 export const AppRoutes = () => {

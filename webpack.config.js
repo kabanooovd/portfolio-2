@@ -91,7 +91,8 @@ module.exports = (_, props) => {
       //     })
       //   : () => {},
       new HtmlWebpackPlugin({
-        template: '/public/index.html',
+        template: path.join(__dirname, "public/index.html"),
+        publicPath: "/",
       }),
       new MiniCssExtractPlugin({
         ignoreOrder: true,

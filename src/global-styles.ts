@@ -1,24 +1,41 @@
 import { createGlobalStyle } from "styled-components"
 import ethnocentric from "./fonts/ethnocentric.ttf"
+import titles from "./fonts/titles.ttf"
 import formular from "./fonts/Formular.woff2"
 import montserrat from "./fonts/Montserrat.ttf"
 
 export const GlobalStyles = createGlobalStyle`
-  body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    ::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+    background: #606061;
+	  }
+	  
+	  ::-webkit-scrollbar-track {
+		width: 6px;
+	  }
+	  
+	  ::-webkit-scrollbar-thumb {
+		width: 6px;
+		background-color: #1c1c1c;
+		border-radius: 6px;
+	  }
+	  
+	  ::-webkit-scrollbar-thumb:hover {
+    background-color: grey;
+	  }
   }
 
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+  @font-face {
+    font-family: "Titles";
+    src: local("Titles"), url(${titles});
   }
-
+  
   @font-face {
     font-family: "Ethnocentric";
     src: local("Ethnocentric"), url(${ethnocentric});
