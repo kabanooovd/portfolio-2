@@ -1,8 +1,9 @@
 [
   {
     "id": "1",
-    "title": "Банк Яенит",
-    "description": "Этот проект блалала вот такие дела",
+    "title": "Банк Зенит",
+    "src": "https://zzcash.net/img/logo/zzcash/ru/Банк%20Зенит%20Кредит.png",
+    "description": "Разработка сервиса взаимодействия с Расчетно кредитным конвеером клиента",
     "technologies": [
       "react",
       "redux",
@@ -12,7 +13,8 @@
   },
   {
     "id": "2",
-    "title": "Банк Яенит",
+    "title": "Банк Уралсиб",
+    "src": "https://s0.rbk.ru/rbcplus_pics/media/img/2/55/805270558862552.jpg",
     "description": "Этот проект блалала вот такие дела",
     "technologies": [
       "react",

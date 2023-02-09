@@ -3,12 +3,11 @@ import { SCREEN_WIDTH } from "../../styles-config";
 import photo from "../../assets/images/photo.jpg";
 
 const optionsWindowAnimation = keyframes`
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 `;
 
 export const Container = styled.div<any>`
-  background: ${({theme}) => theme.colors.GREY_LIGHT};
   height: calc(100vh - 70px - 30px);
   display: flex;
   flex-direction: column;

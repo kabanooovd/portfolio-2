@@ -4,6 +4,7 @@ import { Flex } from "./flex/Flex"
 import { Animated } from "./animation/Animated"
 import { NavBar } from "./navi/Navi"
 import { Icon } from "./icon/Icon"
+import { Button } from "./button/Button"
 
 export {
   Header,
@@ -12,4 +13,5 @@ export {
   Animated,
   NavBar,
   Icon,
+  Button,
 }

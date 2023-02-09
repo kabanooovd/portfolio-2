@@ -8,7 +8,12 @@ export const Flex = styled.div<{
 	padding?: string;
   border?: string;
   brad?: string;
+  wrap?: string;
+  width?: string;
+  height?: string;
 }>`
+  width: ${({width}) => width || "auto"};
+  height: ${({height}) => height || "auto"};
   display: flex;
   flex-direction: ${({direction}) => direction || "row"};
 	align-items: ${({align}) => align || "stretch"};
@@ -17,4 +22,5 @@ export const Flex = styled.div<{
   margin: ${({margin}) => margin || "0"};
 	padding: ${({padding}) => padding || "0"};
   border-radius: ${({brad}) => brad || "0"};
+  flex-wrap: ${({wrap}) => wrap || "nowrap"};
 `
