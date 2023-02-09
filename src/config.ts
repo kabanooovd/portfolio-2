@@ -41,3 +41,8 @@ export const navigations: INavigations[] = [
     title: "О себе",
   },
 ]
+
+export const ICON_DEFAULTS = {
+  size: "S",
+  color: "black",
+}

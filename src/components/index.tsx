@@ -3,6 +3,7 @@ import { Footer } from "./footer/Footer"
 import { Flex } from "./flex/Flex"
 import { Animated } from "./animation/Animated"
 import { NavBar } from "./navi/Navi"
+import { Icon } from "./icon/Icon"
 
 export {
   Header,
@@ -10,4 +11,5 @@ export {
   Flex,
   Animated,
   NavBar,
+  Icon,
 }

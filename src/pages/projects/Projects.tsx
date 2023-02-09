@@ -1,3 +1,11 @@
+import projects from "../../wire-mock/projects.json"
+
 export const Projects = () => {
-  return <>projects</>
+
+  const _projects = projects
+  console.log("=====> ", _projects)
+
+  return <>
+  sdsdsd
+  </>
 }
