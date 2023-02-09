@@ -7,6 +7,7 @@ export const Flex = styled.div<{
   margin?: string;
 	padding?: string;
   border?: string;
+  brad?: string;
 }>`
   display: flex;
   flex-direction: ${({direction}) => direction || "row"};
@@ -15,4 +16,5 @@ export const Flex = styled.div<{
   border: ${({border}) => border || "none"};
   margin: ${({margin}) => margin || "0"};
 	padding: ${({padding}) => padding || "0"};
+  border-radius: ${({brad}) => brad || "0"};
 `

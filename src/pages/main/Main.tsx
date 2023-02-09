@@ -1,10 +1,10 @@
 import { Flex } from "../../components"
 import { theme } from "../../styles-config"
-import { Container, MainTitle, Technologies } from "./Styles"
+import { Container, Image, MainTitle, Technologies } from "./Styles"
 
 export const Main = () => {
   return <Container>
-    <div>IMAGE</div>
+    <Image />
     <Flex direction="column" align="center">
       <MainTitle>Кабанов Дмитрий</MainTitle>
       <MainTitle fontFamily={theme.fonts.ETHNOCENTRIC}>
@@ -12,7 +12,7 @@ export const Main = () => {
       </MainTitle>
     </Flex>
     <Technologies>
-      REACT - REDUX - TYPESCRIPT
+      REACT · REDUX · TYPESCRIPT
     </Technologies>
   </Container>
 }
