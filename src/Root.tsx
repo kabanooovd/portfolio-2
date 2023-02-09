@@ -12,7 +12,6 @@ const AppWrapper = styled.div`
   color: ${({theme}) => theme.colors.DEFAULT_TEX_COLOR};
   display: flex;
   flex-direction: column;
-  /* overflow-y: hidden; */
 `
 
 export const Root: React.FC<{}> = () => {

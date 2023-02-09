@@ -9,7 +9,7 @@ const optionsWindowAnimation = keyframes`
 
 export const Container = styled.div<any>`
   background: ${({theme}) => theme.colors.GREY_LIGHT};
-  min-height: calc(100vh - 50px - 30px);
+  height: calc(100vh - 70px - 30px);
   display: flex;
   flex-direction: column;
   justify-content: space-around;

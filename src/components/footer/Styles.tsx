@@ -8,7 +8,6 @@ export const Container = styled.div`
   bottom: 0;
   height: ${({theme}) => theme.FOTTER_HEIGHT};
   height: 30px;
-
   display: flex;
   justify-content: center;
   align-items: center;

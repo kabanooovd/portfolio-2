@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import styled from "styled-components"
 import { ROUTES } from "./config";
-import { About, Education, Main, Projects } from "./pages";
+import { About, Contacts, Education, Main, Projects } from "./pages";
 
 const ContentWrapper = styled.div`
   /* padding: 100px 40px 10px 40px; */
@@ -11,7 +11,7 @@ const ContentWrapper = styled.div`
 
 export const AppRoutes = () => {
 
-  const { BLANK, MENU, ABOUT, PROJECTS, EDUCATION } = ROUTES
+  const { BLANK, MENU, ABOUT, PROJECTS, EDUCATION, CONTACTS } = ROUTES
 
   return (
     <ContentWrapper>
@@ -20,6 +20,7 @@ export const AppRoutes = () => {
         <Route path={ABOUT} element={<About />} />
         <Route path={PROJECTS} element={<Projects />} />
         <Route path={EDUCATION} element={<Education />} />
+        <Route path={CONTACTS} element={<Contacts />} />
         <Route path={BLANK} element={<Navigate to={MENU} replace />} />
       </Routes>
     </ContentWrapper>

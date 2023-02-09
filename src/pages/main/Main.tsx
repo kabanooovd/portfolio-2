@@ -11,8 +11,6 @@ export const Main = () => {
         Frontend developer
       </MainTitle>
     </Flex>
-    <Technologies>
-      REACT · REDUX · TYPESCRIPT
-    </Technologies>
+    <Technologies>REACT · REDUX · TYPESCRIPT</Technologies>
   </Container>
 }

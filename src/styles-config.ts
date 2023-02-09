@@ -3,6 +3,7 @@ export const theme = {
     WHITE: "#FFFFFF",
     BLACK: "#000000",
     RED: "#fc3a3a",
+    ORANGE: "#ff6a00cc",
     GREY_LIGHT: "#ebe8e8",
     GREY_LIGHT2: "#b0aeb0cc",
     GREY_DARK: "#1b1b1c",
@@ -25,7 +26,7 @@ export const theme = {
     S8: '34px',
     S9: '50px',
   },
-  HEADER_HEIGHT: '50px',
+  HEADER_HEIGHT: '70px',
   FOTTER_HEIGHT: '30px',
 }
 
@@ -36,4 +37,8 @@ export const SCREEN_WIDTH = {
   M: 600,
   S: 500,
   XS: 400,
+}
+
+export const isMobile = (currentScreenWidth: number) => {
+  return currentScreenWidth < SCREEN_WIDTH.L
 }
