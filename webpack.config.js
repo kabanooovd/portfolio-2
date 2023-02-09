@@ -30,6 +30,7 @@ module.exports = (_, props) => {
           use: [
             MiniCssExtractPlugin.loader,
             "css-loader",
+            "style-loader",
             "resolve-url-loader",
             {
               loader: "sass-loader",
