@@ -1,18 +1,19 @@
-import { Button, Flex, Icon } from "../../components"
+import { Button, Flex, Icon, PageTitle } from "../../components"
+import { Utils } from "../../utils"
 import projects from "../../wire-mock/projects.json"
 import { ButtonWrapper, Card, Image } from "./Card"
-import { CardTitle, Container, Description, TechnologiesWrapper, Title } from "./Styles"
+import { CardTitle, Container, Description, TechnologiesWrapper } from "./Styles"
 
 
 export const Projects = () => {
 
-
+  const _projects = Utils.onAddIdentificator(projects)
   return <Container>
     <Flex justify="center" padding="50px 0 0 0">
-      <Title>Мои проекты</Title>
+      <PageTitle>Мои проекты</PageTitle>
     </Flex>
     <Flex justify="center" padding="50px 0" wrap="wrap">
-      {projects.map(project => {
+      {_projects.map(project => {
         return (
           <Card key={project.id}>
             <Flex height="200px" justify="center" align="center">

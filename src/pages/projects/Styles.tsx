@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import { SCREEN_WIDTH } from "../../styles-config";
 
 const optionsWindowAnimation = keyframes`
   0% {opacity: 0;}
@@ -9,15 +8,6 @@ const optionsWindowAnimation = keyframes`
 export const Container = styled.div`
   height: calc(100vh - 70px - 30px);
   animation: ${optionsWindowAnimation} 3.5s;
-`
-
-export const Title = styled.div`
-  font-size: ${({theme}) => theme.fontsSizes.S9};
-  color: ${({theme}) => theme.colors.GREY_LIGHT2};
-
-  @media (max-width: ${SCREEN_WIDTH.L}px) {
-    font-size: ${({theme}) => theme.fontsSizes.S8};
-  };
 `
 
 export const CardTitle = styled.span`
