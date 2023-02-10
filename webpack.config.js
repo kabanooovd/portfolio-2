@@ -66,12 +66,11 @@ module.exports = (_, props) => {
     plugins: [
       props.mode === "production"
         ? new ModuleFederationPlugin({
-          name: "ea_mui_spa",
+          name: "portfol",
           filename: "remoteEntry.js",
           exposes: {
-            "./EAProvider": "./src/containers/EAProvider",
-            "./EARoutes": "./src/routes",
-            "./EAApp": "./src/app",
+            "./EARoutes": "./src/Routes",
+            "./EAApp": "./src/index",
           },
           shared: {
             react: {
