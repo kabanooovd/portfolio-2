@@ -9,7 +9,7 @@ const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = (_, props) => {
   return {
-    mode: props.mode, 
+    mode: "development", 
     target: "web",
     entry: './src/index.tsx',
     devtool: 'inline-source-map',
