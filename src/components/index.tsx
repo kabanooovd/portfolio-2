@@ -6,6 +6,7 @@ import { NavBar } from "./navi/Navi"
 import { Icon } from "./icon/Icon"
 import { Button } from "./button/Button"
 import { PageTitle } from "./page-title/PageTitle"
+import { Link } from "./link/Link"
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   Icon,
   Button,
   PageTitle,
+  Link,
 }

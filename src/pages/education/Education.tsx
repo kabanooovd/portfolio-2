@@ -14,7 +14,7 @@ export const Education = () => {
         {_education.map(({id, content}) => {
           return <Flex key={id} align="center" margin="15px 0">
             <Flex margin="0 10px 0 0">
-              <Icon iconName="instrument" size="S"/>
+              <Icon iconName="project" size="S"/>
             </Flex>
             <p>{content}</p>
           </Flex>
