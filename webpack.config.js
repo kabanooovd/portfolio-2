@@ -2,6 +2,8 @@ const webpack = require("webpack");
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { ModuleFederationPlugin } = require("webpack").container;
+const deps = require("./package.json").dependencies;
 const CopyPlugin = require("copy-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 
@@ -62,34 +64,34 @@ module.exports = (_, props) => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // props.mode === "production"
-      //   ? new ModuleFederationPlugin({
-      //       name: "ea_mui_spa",
-      //       filename: "remoteEntry.js",
-      //       exposes: {
-      //         "./EAProvider": "./src/containers/EAProvider",
-      //         "./EARoutes": "./src/routes",
-      //         "./EAApp": "./src/app",
-      //       },
-      //       shared: {
-      //         react: {
-      //           singleton: true,
-      //           requiredVersion: deps.react,
-      //           eager: true,
-      //         },
-      //         "react-dom": {
-      //           singleton: true,
-      //           requiredVersion: deps["react-dom"],
-      //           eager: true,
-      //         },
-      //         "react-router-dom": {
-      //           singleton: true,
-      //           requiredVersion: deps["react-router-dom"],
-      //           eager: true,
-      //         },
-      //       },
-      //     })
-      //   : () => {},
+      props.mode === "production"
+        ? new ModuleFederationPlugin({
+          name: "ea_mui_spa",
+          filename: "remoteEntry.js",
+          exposes: {
+            "./EAProvider": "./src/containers/EAProvider",
+            "./EARoutes": "./src/routes",
+            "./EAApp": "./src/app",
+          },
+          shared: {
+            react: {
+              singleton: true,
+              requiredVersion: deps.react,
+              eager: true,
+            },
+            "react-dom": {
+              singleton: true,
+              requiredVersion: deps["react-dom"],
+              eager: true,
+            },
+            "react-router-dom": {
+              singleton: true,
+              requiredVersion: deps["react-router-dom"],
+              eager: true,
+            },
+          },
+        })
+        : () => {},
       new HtmlWebpackPlugin({
         template: path.join(__dirname, "public/index.html"),
         publicPath: "/",
