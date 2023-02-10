@@ -19,7 +19,7 @@ export const Contacts = () => {
             <Icon iconName="telegram" size="S"/>
           </Flex>
           <p>
-            <Link href="https://t.me/DimaKabanov" title="DimaKabanov" />
+            <Link isNewTab href="https://t.me/DimaKabanov" title="DimaKabanov" />
           </p>
         </Flex>
         <Flex align="center" margin="15px 0">

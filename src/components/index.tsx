@@ -7,6 +7,7 @@ import { Icon } from "./icon/Icon"
 import { Button } from "./button/Button"
 import { PageTitle } from "./page-title/PageTitle"
 import { Link } from "./link/Link"
+import { BoldString } from "./boldString/BoldString"
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   Button,
   PageTitle,
   Link,
+  BoldString,
 }

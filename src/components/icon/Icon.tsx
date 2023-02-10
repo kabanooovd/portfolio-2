@@ -8,6 +8,7 @@ export const Icon: React.FC<{iconName: string, size?: string, color?: string}> =
     L: "40px",
     M: "30px",
     S: "20px",
+    S2: "14px",
     XS: "10px",
   }
 
