@@ -11,7 +11,7 @@ module.exports = (_, props) => {
   return {
     mode: "development", 
     target: "web",
-    entry: './src/index.tsx',
+    // entry: './src/index.tsx',
     devtool: 'inline-source-map',
     devServer: {
       historyApiFallback: true,
@@ -60,8 +60,7 @@ module.exports = (_, props) => {
       },
     },
     output: {
-      filename: 'bundle.js',
-      path: path.resolve(__dirname, 'dist'),
+      publicPath: "auto",
     },
     plugins: [
       props.mode === "production"
