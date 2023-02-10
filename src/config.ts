@@ -80,3 +80,5 @@ export const technologiesList = [
   "input masks", 
   "Git",
 ]
+
+export const NO_IMAGE = "https://1000kvartyr-68.ru/local/templates/greentower_copy/images/float_sizes.png"

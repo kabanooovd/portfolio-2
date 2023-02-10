@@ -8,6 +8,7 @@ import { Button } from "./button/Button"
 import { PageTitle } from "./page-title/PageTitle"
 import { Link } from "./link/Link"
 import { BoldString } from "./boldString/BoldString"
+import { Modal } from "./modal/Modal"
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   PageTitle,
   Link,
   BoldString,
+  Modal,
 }

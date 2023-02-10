@@ -1,5 +1,5 @@
 import { BoldString, Flex, Icon, Link, PageTitle } from "../../components"
-import { technologiesList } from "../../config"
+import { ROUTES, technologiesList } from "../../config"
 import { theme } from "../../styles-config"
 import { Container, InfoPage, TechWrapper } from "./Styles"
 
@@ -21,7 +21,7 @@ export const About = () => {
           <BoldString margin="0 5px 0 0">Инструменты:</BoldString> MS Visual Studio Code, WebStorm
         </Flex>
         <Flex padding="10px 0" wrap="wrap">
-          <BoldString margin="0 5px 0 0">Базы данных:</BoldString> MongoDB, Mongoose
+          <BoldString margin="0 5px 0 0">Базы данных:</BoldString> MongoDB, Mongoose, PostgresQL
         </Flex>
         <Flex padding="10px 0" wrap="wrap">
           <BoldString margin="0 5px 0 0">Технологии:</BoldString>
@@ -37,7 +37,7 @@ export const About = () => {
         <Flex  padding="10px 0" wrap="wrap">
           <BoldString margin="0 5px 0 0">Мои работы:</BoldString>
           <span>Ознакомиться с моими проектами можно </span>
-          <Link href="/projects" title="тут" color={theme.colors.ORANGE} margin="0 0 0 5px"/>
+          <Link href={ROUTES.PROJECTS} title="тут" color={theme.colors.ORANGE} margin="0 0 0 5px"/>
         </Flex>
         
       </InfoPage>
