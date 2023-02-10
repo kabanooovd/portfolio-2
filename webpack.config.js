@@ -68,10 +68,6 @@ module.exports = (_, props) => {
         ? new ModuleFederationPlugin({
           name: "portfol",
           filename: "remoteEntry.js",
-          exposes: {
-            "./EARoutes": "./src/Routes",
-            "./EAApp": "./src/index",
-          },
           shared: {
             react: {
               singleton: true,
