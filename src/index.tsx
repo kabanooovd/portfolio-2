@@ -5,12 +5,13 @@ import { GlobalStyles } from "./global-styles";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles-config";
 import { BrowserRouter } from "react-router-dom";
+import { baseRoute } from "./config";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <BrowserRouter>
+      <BrowserRouter basename={baseRoute}>
         <Root />
       </BrowserRouter>
     </ThemeProvider>

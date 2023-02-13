@@ -9,6 +9,7 @@ const ContentWrapper = styled.div`
 
 `
 
+
 export const AppRoutes = () => {
 
   const { BLANK, MENU, ABOUT, PROJECTS, EDUCATION, CONTACTS } = ROUTES
