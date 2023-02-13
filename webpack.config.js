@@ -11,7 +11,7 @@ module.exports = (_, props) => {
   return {
     mode: "development", 
     target: "web",
-    // entry: './src/index.tsx',
+    entry: './src/index.tsx',
     devtool: 'inline-source-map',
     devServer: {
       historyApiFallback: true,
@@ -63,32 +63,32 @@ module.exports = (_, props) => {
       publicPath: "auto",
     },
     plugins: [
-      props.mode === "production"
-        ? new ModuleFederationPlugin({
-          name: "portfol",
-          filename: "remoteEntry.js",
-          shared: {
-            react: {
-              singleton: true,
-              requiredVersion: deps.react,
-              eager: true,
-            },
-            "react-dom": {
-              singleton: true,
-              requiredVersion: deps["react-dom"],
-              eager: true,
-            },
-            "react-router-dom": {
-              singleton: true,
-              requiredVersion: deps["react-router-dom"],
-              eager: true,
-            },
-          },
-        })
-        : () => {},
+      // props.mode === "production"
+      //   ? new ModuleFederationPlugin({
+      //     name: "portfol",
+      //     filename: "remoteEntry.js",
+      //     shared: {
+      //       react: {
+      //         singleton: true,
+      //         requiredVersion: deps.react,
+      //         eager: true,
+      //       },
+      //       "react-dom": {
+      //         singleton: true,
+      //         requiredVersion: deps["react-dom"],
+      //         eager: true,
+      //       },
+      //       "react-router-dom": {
+      //         singleton: true,
+      //         requiredVersion: deps["react-router-dom"],
+      //         eager: true,
+      //       },
+      //     },
+      //   })
+      //   : () => {},
       new HtmlWebpackPlugin({
         template: path.join(__dirname, "public/index.html"),
-        publicPath: "/",
+        publicPath: "/portfolio-2",
       }),
       new MiniCssExtractPlugin({
         ignoreOrder: true,
