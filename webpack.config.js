@@ -2,7 +2,6 @@ const webpack = require("webpack");
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const Dotenv = require("dotenv-webpack");
 const { ModuleFederationPlugin } = require("webpack").container;
 const deps = require("./package.json").dependencies;
 const CopyPlugin = require("copy-webpack-plugin");
@@ -15,7 +14,9 @@ module.exports = (_, props) => {
     entry: './src/index.tsx',
     devtool: 'inline-source-map',
     devServer: {
-      historyApiFallback: true,
+      historyApiFallback: {
+        rewrites: [{ from: /\/portfolio-2\/[^?]/, to: '/404.html' }],
+      },
       static: {
         directory: path.join(__dirname, "dist"),
       },
@@ -61,35 +62,35 @@ module.exports = (_, props) => {
       },
     },
     output: {
-      publicPath: process.env.BASE_ROUTE,
+      publicPath: "/portfolio-2/dist",
     },
     plugins: [
-      // props.mode === "production"
-      //   ? new ModuleFederationPlugin({
-      //     name: "portfol",
-      //     filename: "remoteEntry.js",
-      //     shared: {
-      //       react: {
-      //         singleton: true,
-      //         requiredVersion: deps.react,
-      //         eager: true,
-      //       },
-      //       "react-dom": {
-      //         singleton: true,
-      //         requiredVersion: deps["react-dom"],
-      //         eager: true,
-      //       },
-      //       "react-router-dom": {
-      //         singleton: true,
-      //         requiredVersion: deps["react-router-dom"],
-      //         eager: true,
-      //       },
-      //     },
-      //   })
-      //   : () => {},
+      props.mode === "production"
+        ? new ModuleFederationPlugin({
+          name: "portfol",
+          filename: "remoteEntry.js",
+          shared: {
+            react: {
+              singleton: true,
+              requiredVersion: deps.react,
+              eager: true,
+            },
+            "react-dom": {
+              singleton: true,
+              requiredVersion: deps["react-dom"],
+              eager: true,
+            },
+            "react-router-dom": {
+              singleton: true,
+              requiredVersion: deps["react-router-dom"],
+              eager: true,
+            },
+          },
+        })
+        : () => {},
       new HtmlWebpackPlugin({
         template: path.join(__dirname, "public/index.html"),
-        publicPath: "/",
+        // publicPath: "/portfolio-2/dist",
       }),
       new MiniCssExtractPlugin({
         ignoreOrder: true,
@@ -108,7 +109,6 @@ module.exports = (_, props) => {
         React: "react",
       }),
       new ESLintPlugin(),
-      new Dotenv(),
     ],
   }
 };

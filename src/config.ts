@@ -1,7 +1,5 @@
 import * as uuid from "uuid"
 
-export const baseRoute = process.env.BASE_ROUTE;
-
 export const ROUTES = {
   BLANK: '/',
   MENU: '/home',
