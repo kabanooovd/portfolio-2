@@ -7,6 +7,11 @@ const deps = require("./package.json").dependencies;
 const CopyPlugin = require("copy-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 
+const HTML_INIT_ROUTE = {
+  "development": "/",
+  "production": "/portfolio-2",
+}
+
 module.exports = (_, props) => {
   return {
     mode: "development", 
@@ -88,7 +93,7 @@ module.exports = (_, props) => {
         : () => {},
       new HtmlWebpackPlugin({ 
         template: path.join(__dirname, "public/index.html"),
-        publicPath: "/portfolio-2",
+        publicPath: HTML_INIT_ROUTE[props.mode],
       }),
       new MiniCssExtractPlugin({
         ignoreOrder: true,
