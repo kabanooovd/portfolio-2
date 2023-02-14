@@ -17,6 +17,7 @@ export const AppRoutes = () => {
   return (
     <ContentWrapper>
       <Routes>
+        <Route path={"/"} element={<h1>777</h1>} />
         <Route path={MENU} element={<Main />} />
         <Route path={ABOUT} element={<About />} />
         <Route path={PROJECTS} element={<Projects />} />
