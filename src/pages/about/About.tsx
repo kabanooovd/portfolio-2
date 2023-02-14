@@ -1,6 +1,7 @@
-import { BoldString, Flex, Icon, Link, PageTitle } from "../../components"
+import { NavLink } from "react-router-dom"
+import { BoldString, Flex, Icon, PageTitle } from "../../components"
 import { ROUTES, technologiesList } from "../../config"
-import { theme } from "../../styles-config"
+// import { theme } from "../../styles-config"
 import { Container, InfoPage, TechWrapper } from "./Styles"
 
 export const About = () => {
@@ -37,9 +38,16 @@ export const About = () => {
         <Flex  padding="10px 0" wrap="wrap">
           <BoldString margin="0 5px 0 0">Мои работы:</BoldString>
           <span>Ознакомиться с моими проектами можно </span>
-          <Link href={ROUTES.PROJECTS} title="тут" color={theme.colors.ORANGE} margin="0 0 0 5px"/>
+          <Flex margin="0 0 0 5px">
+            <NavLink to={ROUTES.PROJECTS}>тут</NavLink>
+          </Flex>
         </Flex>
-        
+        <Flex padding="10px 0" wrap="wrap">
+          <BoldString margin="0 5px 0 0">Языки:</BoldString>
+          &#127479;&#127482;<Flex margin="0 5px">Русский</Flex>
+          &#127468;&#127463;<Flex margin="0 5px">English</Flex>
+          &#127470;&#127473;<Flex margin="0 5px">עברית</Flex>
+        </Flex>
       </InfoPage>
     </Flex>
   </Container>
