@@ -9,6 +9,7 @@ import { PageTitle } from "./page-title/PageTitle"
 import { Link } from "./link/Link"
 import { BoldString } from "./boldString/BoldString"
 import { Modal } from "./modal/Modal"
+import { Burger } from "./burger/Burger"
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   Link,
   BoldString,
   Modal,
+  Burger,
 }
