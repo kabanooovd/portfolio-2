@@ -18,7 +18,7 @@ export const navigations: INavigations[] = [
   {
     id: uuid.v4(),
     route: ROUTES.MENU,
-    title: "Гравная",
+    title: "Главная",
   },
   {
     id: uuid.v4(),
@@ -30,11 +30,11 @@ export const navigations: INavigations[] = [
     route: ROUTES.EDUCATION,
     title: "Образование",
   },
-  {
-    id: uuid.v4(),
-    route: ROUTES.CONTACTS,
-    title: "Контакты",
-  },
+  // {
+  //   id: uuid.v4(),
+  //   route: ROUTES.CONTACTS,
+  //   title: "Контакты",
+  // },
   {
     id: uuid.v4(),
     route: ROUTES.ABOUT,
